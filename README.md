@@ -1,4 +1,4 @@
 LEWG
 ====
 
-The Library Evolution Working Group issues list
+Documents owned by the Library Evolution Working Group
