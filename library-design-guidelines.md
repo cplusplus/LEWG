@@ -45,6 +45,7 @@ the library is not a style-guide, this section is effectively the style-guide
 on how code is written in the standard library clauses, among other documentation
 conventions.
 
+   * Follow the [editorial guidelines](https://github.com/cplusplus/draft/wiki/Specification-Style-Guidelines).
    * Template parameter names in the specification indicate concepts.
    * Operators come in groups: (`==`, `!=`), (`<`, `>`, `<=`, `>=`), preincrement/postdecrement, etc.
    * Outputs in the algorithms library go to the right.
