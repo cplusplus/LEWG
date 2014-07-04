@@ -46,8 +46,6 @@ on how code is written in the standard library clauses, among other documentatio
 conventions.
 
    * Template parameter names in the specification indicate concepts.
-   * Template parameter names are camel-case.
-   * Template type parameters use `class` not `typename`.
    * Operators come in groups: (`==`, `!=`), (`<`, `>`, `<=`, `>=`), preincrement/postdecrement, etc.
    * Outputs in the algorithms library go to the right.
    * Algorithms always specify complexity guarantees.
@@ -109,7 +107,6 @@ in library component interfaces.
    * Everything is nested into `std`.
    * Official names don't start with an underscore (only hidden names); exception: `_1`, `_2`, etc.
    * No trailing underscores on names.
-   * `const` goes in the wrong place, i.e., to the left.
    * Operators are overloaded where it is close to their original meaning.
    * Do not overload unary address-of operator, nor the comma operator.
    * Do not overload logical `and` operator, nor the logical `or` operator.
