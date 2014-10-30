@@ -1,5 +1,18 @@
 # Guidelines for the https://issues.isocpp.org/ Bugzilla
 
+Shortly after each [mailing](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/), we update or file an issue on https://issues.isocpp.org/ for each paper.
+Anyone is also free to file a feature request or defect report without a paper, although we won't necessarily discuss those issues at in-person meetings.
+If this becomes a spam problem, we might lock down the Bugzilla so only known people can edit it, but for now, it's completely public.
+
+Before each [meeting](https://isocpp.org/std/meetings-and-participation/upcoming-meetings), we need to find presenters for each paper.
+We can loosely track the presenter by assigning the bug to them.
+
+We also need to collect issues into the [C++ wiki](http://wiki.edg.com/). The queries below can help with that.
+
+## Useful queries
+
+* [LEWG's Plate](https://issues.isocpp.org/buglist.cgi?bug_status=NEEDS_DISCUSSION&bug_status=DESIGN_REVIEW&columnlist=component%2Cassigned_to%2Cbug_status%2Cshort_desc%2Cchangeddate&f1=keywords&keywords=needs_updated_proposal%2C%20postponed&keywords_type=nowords&known_name=LEWG%27s%20Plate&list_id=287&o1=notregexp&query_based_on=LEWG%27s%20Plate&query_format=advanced&v1=%5Esg%5B0-9%5D%2B_.%2A)
+
 ## Status meanings
 
 |Status|Meaning|
