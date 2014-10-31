@@ -11,7 +11,12 @@ We also need to collect issues into the [C++ wiki](http://wiki.edg.com/). The qu
 
 ## Useful queries
 
-* [LEWG's Plate](https://issues.isocpp.org/buglist.cgi?bug_status=NEEDS_DISCUSSION&bug_status=DESIGN_REVIEW&columnlist=component%2Cassigned_to%2Cbug_status%2Cshort_desc%2Cchangeddate&f1=keywords&keywords=needs_updated_proposal%2C%20postponed&keywords_type=nowords&known_name=LEWG%27s%20Plate&list_id=287&o1=notregexp&query_based_on=LEWG%27s%20Plate&query_format=advanced&v1=%5Esg%5B0-9%5D%2B_.%2A)
+* [Study group issues](https://issues.isocpp.org/buglist.cgi?columnlist=component%2Cbug_status%2Cshort_desc%2Cassigned_to%2Ckeywords%2Cflagtypes.name&keywords=sg.%2A&keywords_type=regexp&list_id=392&order=bug_status%2Cchangeddate%20DESC&query_based_on=&query_format=advanced) (Doesn't necessarily reflect all issues for a study group unless that SG actively uses the bugzilla.)
+* [Issues on LEWG's Plate](https://issues.isocpp.org/buglist.cgi?bug_status=NEEDS_DISCUSSION&bug_status=DESIGN_REVIEW&columnlist=component%2Cassigned_to%2Cbug_status%2Cshort_desc%2Cchangeddate&f1=keywords&keywords=needs_updated_proposal%2C%20postponed&keywords_type=nowords&known_name=LEWG%27s%20Plate&list_id=287&o1=notregexp&query_based_on=LEWG%27s%20Plate&query_format=advanced&v1=%5Esg%5B0-9%5D%2B_.%2A)
+* [Issues on LWG's Plate](https://issues.isocpp.org/buglist.cgi?bug_status=WORDING_REVIEW&columnlist=component%2Cbug_status%2Cshort_desc%2Cassigned_to%2Ckeywords%2Cflagtypes.name&component=Library&keywords=needs_updated_proposal%2C%20postponed%2C%20&keywords_type=nowords&list_id=390&query_format=advanced)
+* [Open polls](https://issues.isocpp.org/buglist.cgi?columnlist=component%2Cbug_status%2Cshort_desc%2Ckeywords%2Cflagtypes.name&f1=flagtypes.name&f2=flagtypes.name&f3=flagtypes.name&j_top=OR&list_id=385&o1=substring&o2=substring&o3=substring&query_format=advanced&v1=tentative_good_design&v2=tentative_ready&v3=tentative_nad)
+* [Issues waiting for a paper or wording](https://issues.isocpp.org/buglist.cgi?columnlist=component%2Cbug_status%2Cshort_desc%2Ckeywords%2Cflagtypes.name%2Cassigned_to&f1=bug_status&f2=bug_status&f3=keywords&j_top=OR&list_id=393&o1=equals&o2=equals&o3=substring&query_based_on=&query_format=advanced&v1=NEEDS_WORDING&v2=NEEDS_PAPER&v3=needs_updated_proposal)
+* [Postponed issues](https://issues.isocpp.org/buglist.cgi?keywords=postponed%2C%20&keywords_type=allwords&list_id=394&query_format=advanced)
 
 ## Status meanings
 
