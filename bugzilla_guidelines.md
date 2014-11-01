@@ -1,8 +1,12 @@
 # Guidelines for the https://issues.isocpp.org/ Bugzilla
 
+Anyone should feel free to file feature requests or design-scale bug reports in https://issues.isocpp.org/, even if you're not on the C++ committee.
+File wording-level bug reports according to the instructions in the [LWG issues list](http://cplusplus.github.io/LWG/lwg-active.html) instead.
+If the issue isn't given a status within a couple days, ping the c++std-lib-ext or [std-proposals](https://groups.google.com/a/isocpp.org/forum/#!forum/std-proposals) mailing list.
+We won't necessarily discuss issues without wording or a paper, but they can help gauge interest.
+You can use the issue tracker to point out questions that need discussion, but please try to keep the discussion itself on a mailing list.
+
 Shortly after each [mailing](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/), we update or file an issue on https://issues.isocpp.org/ for each paper.
-Anyone is also free to file a feature request or defect report without a paper, although we won't necessarily discuss those issues at in-person meetings.
-If this becomes a spam problem, we might lock down the Bugzilla so only known people can edit it, but for now, it's completely public.
 
 Before each [meeting](https://isocpp.org/std/meetings-and-participation/upcoming-meetings), we need to find presenters for each paper.
 We can loosely track the presenter by assigning the bug to them.
