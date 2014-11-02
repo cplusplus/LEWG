@@ -13,6 +13,10 @@ We can loosely track the presenter by assigning the bug to them.
 
 We also need to collect issues into the [C++ wiki](http://wiki.edg.com/). The queries below can help with that.
 
+During a committee-meeting session, the person taking notes should record the gist of what people say into the [wiki](http://wiki.edg.com/).
+The person running the meeting should collect the URL of the notes, and any action items and straw polls into a comment on the [issue](https://issues.isocpp.org/).
+It can be helpful to project the comment containing the straw polls while you're taking them, since that makes sure everyone remembers the wording.
+
 ## Useful queries
 
 * [Study group issues](https://issues.isocpp.org/buglist.cgi?columnlist=component%2Cbug_status%2Cshort_desc%2Cassigned_to%2Ckeywords%2Cflagtypes.name&keywords=sg.%2A&keywords_type=regexp&list_id=392&order=bug_status%2Cchangeddate%20DESC&query_based_on=&query_format=advanced) (Doesn't necessarily reflect all issues for a study group unless that SG actively uses the bugzilla.)
