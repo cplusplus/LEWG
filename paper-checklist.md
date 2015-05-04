@@ -14,5 +14,4 @@
 - [ ] Check for namespace changes
 - [ ] Describe use experience
 - [ ] Any necessary changes to appendix C (changes since last std)
-
-
+- [ ] Suggests a feature-test macro & example code for using it, or explains why no feature test is needed.
