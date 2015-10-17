@@ -1,0 +1,34 @@
+{
+  "name": "cxx-lewg-scripts",
+  "version": "0.1.0",
+  "description": "A node.js program to help organize C++ meetings",
+  "main": "main.js",
+  "bin": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cplusplus/LEWG.git"
+  },
+  "author": "Jeffrey Yasskin",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/cplusplus/LEWG/issues"
+  },
+  "homepage": "https://github.com/cplusplus/LEWG",
+  "engines": {
+    "node": ">=4.2"
+  },
+  "dependencies": {
+    "array.prototype.includes": "^1.0.0",
+    "cheerio": "^0.19.0",
+    "handlebars": "^4.0.3",
+    "jayson": "^1.2.0",
+    "keytar": "^3.0.0",
+    "read": "^1.0.5",
+    "request": "^2.55.0",
+    "tough-cookie": "^2.2.0",
+    "yargs": "^3.27.0"
+  }
+}
