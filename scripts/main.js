@@ -68,9 +68,12 @@ function computePageName(issue) {
 
 function elaborateIssue(issue) {
   let commentsP = isocppIssues.getComments(issue.id);
-  let ccNamesP = isocppIssues.getUserRealNames(
+  let ccNamesP = isocppIssues.getUserRealNames(issue.cc.filter(addr => {
     // Don't mention the LEWG chair as someone to invite.
-    issue.cc.filter(addr => !addr.startsWith('jyasskin@')));
+    return !addr.startsWith('jyasskin@') &&
+      // And don't list the presenter separately.
+      addr != issue.assigned_to;
+  }));
   let presenterNameP;
   if (issue.assigned_to === 'c++std-lib-ext@accu.org') {
     presenterNameP = Promise.resolve(undefined);
