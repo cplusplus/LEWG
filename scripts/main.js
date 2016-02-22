@@ -109,6 +109,8 @@ isocppWiki.login().then(function() {
 }).then(function(issues) {
   return Promise.all(issues.map(elaborateIssue));
 }).then(function(issues) {
+  let collator = new Intl.Collator('en');
+  issues.sort((a,b) => collator.compare(a.pageName, b.pageName));
   console.log(genMainPage(issues));
   var writes = [];
   for (let issue of issues) {
