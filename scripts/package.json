@@ -26,6 +26,7 @@
     "handlebars": "^4.0.3",
     "jayson": "^1.2.0",
     "keytar": "^3.0.0",
+    "limiter": "^1.1.0",
     "read": "^1.0.5",
     "request": "^2.55.0",
     "tough-cookie": "^2.2.0",

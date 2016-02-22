@@ -21,7 +21,7 @@ let handlebars = require('handlebars');
 let fs = require('fs');
 let isocppIssues = require('./isocppIssues');
 let assert = require('assert');
-let isocppWiki = require('./isocppWiki')('Wg21kona2015');
+let isocppWiki = require('./isocppWiki')('Wg21jacksonville');
 
 function readHandlebars(filename) {
   return handlebars.compile(fs.readFileSync(filename, {encoding: 'utf8'}));
@@ -68,7 +68,9 @@ function computePageName(issue) {
 
 function elaborateIssue(issue) {
   let commentsP = isocppIssues.getComments(issue.id);
-  let ccNamesP = isocppIssues.getUserRealNames(issue.cc);
+  let ccNamesP = isocppIssues.getUserRealNames(
+    // Don't mention the LEWG chair as someone to invite.
+    issue.cc.filter(addr => !addr.startsWith('jyasskin@')));
   let presenterNameP;
   if (issue.assigned_to === 'c++std-lib-ext@accu.org') {
     presenterNameP = Promise.resolve(undefined);

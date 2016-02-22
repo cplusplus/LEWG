@@ -22,14 +22,19 @@ let assert = require('assert');
 let keytar = require('keytar');
 let read = require('read');
 let cheerio = require('cheerio');
+let RateLimiter = require('limiter').RateLimiter;
 
 let username = 'wg21'
 
+let requestLimit = new RateLimiter(2, 'second');
+
 function pRequest(options) {
   return new Promise(function(resolve, reject) {
-    request(options, function(error, response, body) {
-      if (error) reject(error);
-      else resolve({response: response, body: body});
+    requestLimit.removeTokens(1, () => {
+      request(options, function(error, response, body) {
+        if (error) reject(error);
+        else resolve({response: response, body: body});
+      });
     });
   });
 };
@@ -62,7 +67,7 @@ module.exports = function(meetingRoot) {
     let passwordP;
     if (password === null) {
       passwordP = new Promise(function(resolve, reject) {
-        read({prompt: 'Password:', silent: true}, function(error, result) {
+        read({prompt: 'wiki.edg.com password:', silent: true}, function(error, result) {
           if (error) reject(error);
           else resolve(result);
         });
@@ -100,7 +105,7 @@ module.exports = function(meetingRoot) {
     let dryrun = options.dryrun;
 
     let editUrl = makeUrl('edit', name)
-    editUrl.query.nowysiwig = 1;
+    editUrl.query.nowysiwyg = 1;
     editUrl.query.t = Date.now();
     return loadHTML({url: editUrl}).then(function($) {
       let $form = $('form[name=main]');
