@@ -21,7 +21,7 @@ let handlebars = require('handlebars');
 let fs = require('fs');
 let isocppIssues = require('./isocppIssues');
 let assert = require('assert');
-let isocppWiki = require('./isocppWiki')('Wg21jacksonville');
+let isocppWiki = require('./isocppWiki')('Wg21oulu');
 
 function readHandlebars(filename) {
   return handlebars.compile(fs.readFileSync(filename, {encoding: 'utf8'}));
@@ -48,7 +48,7 @@ function findLastMatching(regex, comments) {
 };
 
 function findLastPaper(comments) {
-  return findLastMatching(/https?:\/\/www.open-std.org\/jtc1\/sc22\/wg21\/docs\/papers\/\d+\/(?:n\d+|p\d+r\d+)\.\w+|https:\/\/isocpp.org\/files\/papers\/(?:n\d+|p\d+r\d+)\.\w+/ig,
+  return findLastMatching(/https?:\/\/(?:www.)?open-std.org\/jtc1\/sc22\/wg21\/docs\/papers\/\d+\/(?:n\d+|p\d+r\d+)\.\w+|https:\/\/isocpp.org\/files\/papers\/(?:n\d+|p\d+r\d+)\.\w+/ig,
                           comments);
 };
 function findLatestDiscussion(comments) {
