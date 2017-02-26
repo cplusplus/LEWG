@@ -48,7 +48,7 @@ function findLastMatching(regex, comments) {
 };
 
 function findLastPaper(comments) {
-  return findLastMatching(/https?:\/\/(?:www.)?open-std.org\/jtc1\/sc22\/wg21\/docs\/papers\/\d+\/(?:n\d+|p\d+r\d+)\.\w+|https:\/\/isocpp.org\/files\/papers\/(?:n\d+|p\d+r\d+)\.\w+/ig,
+  return findLastMatching(/https?:\/\/(?:www.)?open-std.org\/jtc1\/sc22\/wg21\/docs\/papers\/\d+\/(?:n\d+|p\d+r\d+)\.\w+|https:\/\/isocpp.org\/files\/papers\/(?:n\d+|p\d+r\d+)\.\w+|http:\/\/wg21.link\/p\d+r\d+/ig,
                           comments);
 };
 function findLatestDiscussion(comments) {
