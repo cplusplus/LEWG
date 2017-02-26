@@ -21,7 +21,7 @@ let handlebars = require('handlebars');
 let fs = require('fs');
 let isocppIssues = require('./isocppIssues');
 let assert = require('assert');
-let isocppWiki = require('./isocppWiki')('Wg21oulu');
+let isocppWiki = require('./isocppWiki')('Wg21kona2017');
 
 function readHandlebars(filename) {
   return handlebars.compile(fs.readFileSync(filename, {encoding: 'utf8'}));
