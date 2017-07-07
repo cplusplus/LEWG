@@ -21,7 +21,7 @@ let handlebars = require('handlebars');
 let fs = require('fs');
 let isocppIssues = require('./isocppIssues');
 let assert = require('assert');
-let isocppWiki = require('./isocppWiki')('Wg21kona2017');
+let isocppWiki = require('./isocppWiki')('Wg21toronto2017');
 
 function readHandlebars(filename) {
   return handlebars.compile(fs.readFileSync(filename, {encoding: 'utf8'}));
@@ -75,7 +75,7 @@ function elaborateIssue(issue) {
       addr != issue.assigned_to;
   }));
   let presenterNameP;
-  if (issue.assigned_to === 'c++std-lib-ext@accu.org') {
+  if (issue.assigned_to === 'lib-ext@lists.isocpp.org') {
     presenterNameP = Promise.resolve(undefined);
   } else {
     presenterNameP = isocppIssues.getUserRealNames([issue.assigned_to]);

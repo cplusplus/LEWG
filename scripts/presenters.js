@@ -21,7 +21,7 @@ let assert = require('assert');
 function elaborateIssue(issue) {
   let ccNamesP = isocppIssues.getUserRealNames(issue.cc);
   let presenterNameP;
-  if (issue.assigned_to === 'c++std-lib-ext@accu.org') {
+  if (issue.assigned_to === 'lib-ext@lists.isocpp.org') {
     presenterNameP = Promise.resolve(undefined);
   } else {
     presenterNameP = isocppIssues.getUserRealNames([issue.assigned_to]);
@@ -41,8 +41,9 @@ isocppIssues.lewgPlate().then(function(issues) {
   for (let issue of issues) {
     if (issue.presenterName === undefined) {
       console.warn(`No presenter for LEWG${issue.id}`);
+    } else {
+      presenters.add(`${issue.presenterName} <${issue.assigned_to}>,`);
     }
-    presenters.add(`${issue.presenterName} <${issue.assigned_to}>,`);
   }
   for (let presenter of Array.from(presenters).sort()) {
     console.log(presenter);

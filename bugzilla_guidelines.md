@@ -13,7 +13,8 @@ We track the presenter by assigning the bug to them.
 If you're assigned a bug but won't be at the next [C++ meeting](https://isocpp.org/std/meetings-and-participation/upcoming-meetings),
 it's your responsibility to find someone to present it.
 
-We also need to collect issues into the [C++ wiki](http://wiki.edg.com/). The queries below can help with that.
+Before each meeting, we use the [scripts](scripts/) in this repository to
+collect issues into the [C++ wiki](http://wiki.edg.com/).
 
 During a committee-meeting session, the person taking notes should record the gist of what people say into the [wiki](http://wiki.edg.com/).
 The person running the meeting should collect the URL of the notes, and any action items and straw polls into a comment on the [issue](https://issues.isocpp.org/).
@@ -21,9 +22,9 @@ It can be helpful to project the comment containing the straw polls while you're
 
 ## Useful queries
 
-* [Study group issues](https://issues.isocpp.org/buglist.cgi?columnlist=component%2Cbug_status%2Cshort_desc%2Cassigned_to%2Ckeywords%2Cflagtypes.name&keywords=sg.%2A&keywords_type=regexp&list_id=392&order=bug_status%2Cchangeddate%20DESC&query_based_on=&query_format=advanced) (Doesn't necessarily reflect all issues for a study group unless that SG actively uses the bugzilla.)
-* [Issues on LEWG's Plate](https://issues.isocpp.org/buglist.cgi?bug_status=NEEDS_DISCUSSION&bug_status=DESIGN_REVIEW&columnlist=component%2Cassigned_to%2Cbug_status%2Cshort_desc%2Cchangeddate&keywords=needs_updated_proposal%2C%20postponed&keywords_type=nowords&known_name=LEWG%27s%20Plate&list_id=740&query_based_on=LEWG%27s%20Plate&query_format=advanced)
-* [Issues on LWG's Plate](https://issues.isocpp.org/buglist.cgi?bug_status=WORDING_REVIEW&columnlist=component%2Cbug_status%2Cshort_desc%2Cassigned_to%2Ckeywords%2Cflagtypes.name&component=Library&keywords=needs_updated_proposal%2C%20postponed%2C%20&keywords_type=nowords&list_id=390&query_format=advanced)
+* [Study group issues](https://issues.isocpp.org/buglist.cgi?bug_status=SG_REVIEW&columnlist=changeddate%2Cshort_desc%2Cassigned_to%2Ckeywords%2Cflagtypes.name) (Doesn't necessarily reflect all issues for a study group unless that SG actively uses the bugzilla.)
+* [Issues on LEWG's Plate](https://issues.isocpp.org/buglist.cgi?bug_status=NEEDS_DISCUSSION&bug_status=DESIGN_REVIEW&columnlist=changeddate%2Cbug_status%2Cshort_desc%2Cassigned_to%2Ckeywords%2Cflagtypes.name&keywords=needs_updated_proposal%2C%20postponed&keywords_type=nowords)
+* [Issues on LWG's Plate](https://issues.isocpp.org/buglist.cgi?bug_status=WORDING_REVIEW&columnlist=changeddate%2Cshort_desc%2Cassigned_to%2Ckeywords%2Cflagtypes.name&keywords=needs_updated_proposal%2C%20postponed%2C%20&keywords_type=nowords)
 * [Open polls](https://issues.isocpp.org/buglist.cgi?columnlist=component%2Cbug_status%2Cshort_desc%2Ckeywords%2Cflagtypes.name&f1=flagtypes.name&f2=flagtypes.name&f3=flagtypes.name&j_top=OR&list_id=385&o1=substring&o2=substring&o3=substring&query_format=advanced&v1=tentative_good_design&v2=tentative_ready&v3=tentative_nad)
 * [Issues waiting for a paper or wording](https://issues.isocpp.org/buglist.cgi?columnlist=component%2Cbug_status%2Cshort_desc%2Ckeywords%2Cflagtypes.name%2Cassigned_to&f1=bug_status&f2=bug_status&f3=keywords&j_top=OR&list_id=393&o1=equals&o2=equals&o3=substring&query_based_on=&query_format=advanced&v1=NEEDS_WORDING&v2=NEEDS_PAPER&v3=needs_updated_proposal)
 * [Postponed issues](https://issues.isocpp.org/buglist.cgi?keywords=postponed%2C%20&keywords_type=allwords&list_id=394&query_format=advanced)
@@ -43,7 +44,8 @@ It can be helpful to project the comment containing the straw polls while you're
 |ADOPTED|This got into the standard or became an official policy somewhere.|
 |CLOSED|This didn't get into the standard.|
 
-An issue will go through these roughly in order, although any issue created for a paper will skip straight to `DESIGN_REVIEW`.
+An issue will go through these roughly in order, although any issue created for
+a paper will skip straight to `SG_REVIEW` or `DESIGN_REVIEW`.
 
 ## Keyword meanings
 
