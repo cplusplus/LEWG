@@ -18,6 +18,7 @@ let argv = require('yargs')
 
 require('array.prototype.includes');
 let handlebars = require('handlebars');
+let log = require('npmlog');
 let fs = require('fs');
 let isocppIssues = require('./isocppIssues');
 let assert = require('assert');
@@ -67,19 +68,26 @@ function computePageName(issue) {
 }
 
 function elaborateIssue(issue) {
-  let commentsP = isocppIssues.getComments(issue.id);
+  let progress = log.newItem('LEWG' + issue.id + ': ' + issue.summary, 3);
+  function completeWork(x) {
+    progress.completeWork(1);
+    return x;
+  }
+  let commentsP = isocppIssues.getComments(issue.id).then(completeWork);
   let ccNamesP = isocppIssues.getUserRealNames(issue.cc.filter(addr => {
     // Don't mention the LEWG chair as someone to invite.
     return !addr.startsWith('jyasskin@') &&
       // And don't list the presenter separately.
       addr != issue.assigned_to;
   }));
+  ccNamesP = ccNamesP.then(completeWork);
   let presenterNameP;
   if (issue.assigned_to === 'lib-ext@lists.isocpp.org') {
     presenterNameP = Promise.resolve(undefined);
   } else {
     presenterNameP = isocppIssues.getUserRealNames([issue.assigned_to]);
   }
+  presenterNameP = presenterNameP.then(completeWork);
   return Promise.all([commentsP, ccNamesP, presenterNameP])
     .then(function(arr) {
       issue.comments = arr[0];
@@ -107,6 +115,7 @@ function genIssuePage(issue) {
   });
 };
 
+log.enableProgress();
 isocppWiki.login().then(function() {
   return isocppIssues.lewgPlate();
 }).then(function(issues) {
@@ -118,14 +127,14 @@ isocppWiki.login().then(function() {
   var writes = [];
   for (let issue of issues) {
     writes.push(genIssuePage(issue).catch(function(err) {
-      console.error('Failed to write issue ' + issue.id + ': ' + (err.stack || err));
+      log.error('', 'Failed to write issue ' + issue.id + ': ' + (err.stack || err));
     }));
   }
   return Promise.all(writes);
 }).then(writes => {
   if (argv.dryrun) {
     for (let write of writes) {
-      console.log(write);
+      log.info('Would write:', write);
     }
   }
-}).catch(function(err) { console.error(err.stack || err); });
+}).catch(function(err) { log.error('', err.stack || err); });

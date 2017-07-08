@@ -22,30 +22,32 @@ let assert = require('assert');
 let keytar = require('keytar');
 let read = require('read');
 let cheerio = require('cheerio');
-let RateLimiter = require('limiter').RateLimiter;
+let progress = require('./progress');
+let ConcurrencyLimit = require('./concurrencyLimit').ConcurrencyLimit;
 
-let username = 'wg21'
+let requestLimit = new ConcurrencyLimit(2);
 
-let requestLimit = new RateLimiter(2, 'second');
+let username = 'wg21';
 
 function pRequest(options) {
-  return new Promise(function(resolve, reject) {
-    requestLimit.removeTokens(1, () => {
-      request(options, function(error, response, body) {
-        if (error) reject(error);
-        else resolve({response: response, body: body});
-      });
-    });
-  });
+  return requestLimit.whenReady(() =>
+      new Promise(function(resolve, reject) {
+        request(options, function(error, response, body) {
+          if (error) reject(error);
+          else resolve({response: response, body: body});
+        });
+      }));
 };
 
 function loadHTML(options) {
-  return pRequest(options).then(function(result) {
-    if (result.response.statusCode !== 200) {
-      throw new Error('Non-200 result fetching ' + url.format(options.url) + ':\n' + result.body);
-    }
-    return cheerio.load(result.body);
-  });
+  return progress.item(
+      'Loading ' + url.format(options.url),
+      pRequest(options).then(function(result) {
+        if (result.response.statusCode !== 200) {
+          throw new Error('Non-200 result fetching ' + url.format(options.url) + ':\n' + result.body);
+        }
+        return cheerio.load(result.body);
+      }));
 };
 
 function formFields($form) {

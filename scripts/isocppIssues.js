@@ -13,17 +13,20 @@
 
 var jsonrpc = require('jayson');
 var client = jsonrpc.client.https('https://issues.isocpp.org/jsonrpc.cgi');
+let ConcurrencyLimit = require('./concurrencyLimit').ConcurrencyLimit;
 
+let requestLimit = new ConcurrencyLimit(5);
 
 function pRequest(method, argument) {
-  return new Promise(function(resolve, reject) {
-    client.request(
-      method, [argument],
-      function(err, error, result) {
-        if (err) reject(err);
-        else resolve(result);
-      });
-  });
+  return requestLimit.whenReady(() =>
+      new Promise(function(resolve, reject) {
+        client.request(
+            method, [argument],
+            function(err, error, result) {
+              if (err) reject(err);
+              else resolve(result);
+            });
+      }));
 };
 
 // https://www.bugzilla.org/docs/4.4/en/html/api/Bugzilla/WebService/Bug.html#search
