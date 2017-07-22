@@ -5,12 +5,12 @@ If you are proposing a library component for standardization, you should follow 
 
 For information on the overall proposal and how to submit it, see the [Call for Library Proposals](http://cplusplus.github.com/LWG/call-for-library-proposals.html).
 
-##Status of the guidelines
+## Status of the guidelines
 
 These guidelines began as a braindump by about 30 standards committee members at the committee's October, 2012, meeting in Portland, Oregon, US.
 Organizing these random ideas into a coherent set of guidelines is an ongoing project.
 
-##Understanding the guidelines
+## Understanding the guidelines
 
 Certain words have very specific applicability when used in guidelines:
 
@@ -20,7 +20,7 @@ Certain words have very specific applicability when used in guidelines:
  + **Avoid** -- deviate from the guideline only with good reason.
  + **Never** -- without exception, other than as noted by the guideline.
 
-##Scope of library text
+## Scope of library text
 
 Some topics are appropriate subject matter for library text, while other topics are
 best left for front matter, implementers, educators, or others.
@@ -37,7 +37,7 @@ best left for front matter, implementers, educators, or others.
    + Avoid target assumptions. The committee will decide whether the C++ standard itself, a separate standard, a technical specification, or a technical report is the final target for your proposal. However, a proposal that involves changes to an existing library component always targets the document of the component being modified.
 
 
-##How We Say It
+## How We Say It
 
 When we document a library for the standard, there are some conventions on how
 we document things, how the code is formatted in examples, and so forth.  While
@@ -65,7 +65,7 @@ conventions.
    * Generic components should be written to use minimal requirements while maintaining an efficient implementation.
 
 
-##How We Design It
+## How We Design It
 
 General design guidelines for successful library components.  As the standard
 library we document is a specification, and not an implementation, these
@@ -96,7 +96,7 @@ they fit together, along with some more nebulous ideas of 'usability'.
    * Prefer to specify nested types as a typedef for an _unspecified_ or _implementation-defined_ type, rather than as a class or enumeration type. This avoids over-constraining implementations.
 
 
-##How We Code It
+## How We Code It
 
 Some very specific guidelines on coding conventions and use of language features
 in library component interfaces.
@@ -138,7 +138,7 @@ in library component interfaces.
    * When possible build on existing low-level library facilities rather than building new ones.
 
 
-##How we develop it
+## How we develop it
 
 The process of developing the standard library publications.
 
