@@ -35,6 +35,7 @@ best left for front matter, implementers, educators, or others.
    + Never specify the core language support required by a library component; support for the full core language is always assumed.
    + Avoid dependencies on external libraries. If the whole purpose of a library component is to gain access to some external library, then a dependency on that library may be unavoidable.
    + Avoid target assumptions. The committee will decide whether the C++ standard itself, a separate standard, a technical specification, or a technical report is the final target for your proposal. However, a proposal that involves changes to an existing library component always targets the document of the component being modified.
+   + <xxx.h> headers are owned by WG14 (and to a lesser extent, POSIX). It must be possible to build the C++ standard library on top of a conforming C standard library. (counterexample: \<complex.h\> is presently specified to include \<ccomplex\>)
 
 
 ## How We Say It
