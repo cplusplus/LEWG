@@ -31,7 +31,7 @@ best left for front matter, implementers, educators, or others.
    + Library text is not a tutorial and is not a style-guide (although it should follow a consistent style).
    + Library components must always be implementable by hosted implementations, and must always be implementable by freestanding implementations if the containing header is identified as a header for freestanding implementations.
    + The specification for a library component must always be precise, unambiguous, and clear, in roughly that order.
-   + Clause 17 of the C++ standard, Library introduction, always applies. In particular, the specification of your library component should always follow the conventions of 17.5, Method of description.
+   + Clause 20 of the C++ standard, Library introduction, always applies. In particular, the specification of your library component should always follow the conventions of 20.4 [description], Method of description (Informative).
    + Never specify the core language support required by a library component; support for the full core language is always assumed.
    + Avoid dependencies on external libraries. If the whole purpose of a library component is to gain access to some external library, then a dependency on that library may be unavoidable.
    + Avoid target assumptions. The committee will decide whether the C++ standard itself, a separate standard, a technical specification, or a technical report is the final target for your proposal. However, a proposal that involves changes to an existing library component always targets the document of the component being modified.
