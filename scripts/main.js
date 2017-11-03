@@ -22,7 +22,7 @@ let log = require('npmlog');
 let fs = require('fs');
 let isocppIssues = require('./isocppIssues');
 let assert = require('assert');
-let isocppWiki = require('./isocppWiki')('Wg21toronto2017');
+let isocppWiki = require('./isocppWiki')('Wg21albuquerque');
 
 function readHandlebars(filename) {
   return handlebars.compile(fs.readFileSync(filename, {encoding: 'utf8'}));
@@ -57,6 +57,22 @@ function findLatestDiscussion(comments) {
                           comments);
 };
 
+const PRIORITIES = {
+  Highest: 100,
+  High: 200,
+  Medium: 300,
+  Low: 400,
+  Lowest: 500,
+  Untriaged: 600,
+};
+function orderPriority(priority) {
+  let result = PRIORITIES[priority];
+  if (result === undefined) {
+    throw `Unexpected priority: ${priority}`;
+  }
+  return result;
+}
+
 function computePageName(issue) {
   let paperNumber = /papers\/\d+\/(p\d+r\d+)\.\w+$/.exec(issue.latestPaper);
   if (paperNumber === null) {
@@ -77,6 +93,7 @@ function elaborateIssue(issue) {
   let ccNamesP = isocppIssues.getUserRealNames(issue.cc.filter(addr => {
     // Don't mention the LEWG chair as someone to invite.
     return !addr.startsWith('jyasskin@') &&
+      !addr.startsWith('titus@') &&
       // And don't list the presenter separately.
       addr != issue.assigned_to;
   }));
@@ -95,6 +112,7 @@ function elaborateIssue(issue) {
       issue.presenterName = arr[2];
       issue.latestPaper = findLastPaper(issue.comments);
       issue.latestDiscussion = findLatestDiscussion(issue.comments);
+      issue.priority = orderPriority(issue.priority);
       issue.pageName = computePageName(issue);
       return issue;
     });
@@ -122,7 +140,10 @@ isocppWiki.login().then(function() {
   return Promise.all(issues.map(elaborateIssue));
 }).then(function(issues) {
   let collator = new Intl.Collator('en');
-  issues.sort((a,b) => collator.compare(a.pageName, b.pageName));
+  issues.sort((a,b) => {
+    if (a.priority != b.priority) return a.priority - b.priority;
+    return collator.compare(a.pageName, b.pageName);
+  });
   console.log(genMainPage(issues));
   var writes = [];
   for (let issue of issues) {
