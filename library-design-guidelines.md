@@ -94,6 +94,9 @@ they fit together, along with some more nebulous ideas of 'usability'.
    * When designing a class type, where possible it should be a "regular type" (to be defined), e.g., different objects are independent.
    * Use `std::addressof()` to obtain addresses based on generic parameters.
    * Prefer to specify nested types as a typedef for an _unspecified_ or _implementation-defined_ type, rather than as a class or enumeration type. This avoids over-constraining implementations.
+   * Do not use `requires` clauses or define new language-level
+     `concept`s until the introduction and fundamental concepts from
+     the Ranges TS have merged into the IS.
 
 
 ## How We Code It
