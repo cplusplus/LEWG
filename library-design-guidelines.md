@@ -95,8 +95,8 @@ they fit together, along with some more nebulous ideas of 'usability'.
    * Use `std::addressof()` to obtain addresses based on generic parameters.
    * Prefer to specify nested types as a typedef for an _unspecified_ or _implementation-defined_ type, rather than as a class or enumeration type. This avoids over-constraining implementations.
    * Do not use `requires` clauses or define new language-level
-     `concept`s until the introduction and fundamental concepts from
-     the Ranges TS have merged into the IS.
+     `concept`s until the introduction (section 6) and fundamental
+     concepts (section 7) from the Ranges TS have merged into the IS.
 
 
 ## How We Code It
