@@ -37,8 +37,8 @@ It can be helpful to project the comment containing the straw polls while you're
 |NEEDS_DISCUSSION|LEWG should discuss this, but it's not a concrete proposal.|
 |NEEDS_WORDING|Someone needs to propose wording that would fix the issue before LEWG discusses it.|
 |NEEDS_PAPER|Someone needs to write a paper about this issue before LEWG discusses it.|
-|SG_REVIEW|There's a concrete proposal, and the SG idenfied by a keyword should review the design.|
-|DESIGN_REVIEW|There's a concrete proposal, and the LEWG should review the design.|
+|SG_REVIEW|There's a concrete proposal, and the SG identified by a keyword should review the design.|
+|DESIGN_REVIEW|There's a concrete proposal, and LEWG should review the design.|
 |WORDING_REVIEW|LEWG is happy with the design of the proposal, and LWG should review the wording.|
 |READY|LWG is happy with the wording.|
 |ADOPTED|This got into the standard or became an official policy somewhere.|
