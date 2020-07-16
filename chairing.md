@@ -66,11 +66,22 @@ Problems should be discovered and explored during meetings, but resist the tempt
 0. Ask the room for input or clarifying questions on the poll.
 0. Decide whether you wish to make any changes to the poll wording based on input.
 0. Inform the room that you are now taking the poll, and discussion must cease until the poll is over.
-0. If applicable, ask if there is any objection to unanimous consent.
+0. If applicable, ask if there is any objection to unanimous consent/dissent.
 0. Take the poll.
 0. Record the number of attendees present, number of authors present, author position, date, and time.
 0. Ask if anyone wishes to explain how they voted or if anyone wants to request an explanation for a certain vote (attendees may always decline such a request).
-0. State and record what the outcome of the poll was: no objection to unanimous consent, unanimous consent (no neutral or against votes), strong consent, weak consent, or not consent.
+0. State and record what the outcome of the poll was, which will be one of the following:
+   * No objection to unanimous consent.
+   * No objection to unanimous dissent.
+   * Unanimous consensus for (no neutral or against votes).
+   * Unanimous consensus against (no neutral or for votes).
+   * Strong consensus for (no against votes).
+   * Strong consensus against (no for votes).
+   * Consensus for.
+   * Consensus against.
+   * Weak consensus for.
+   * Weak consensus against.
+   * No consensus.
 
 ### Post-Meeting Checklist
 
