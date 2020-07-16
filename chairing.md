@@ -119,6 +119,8 @@ __Attendance:__
 __# of Authors:__
 
 __Author Position:__
+
+__Outcome:__
 ```
 
 #### Approval Poll
@@ -135,6 +137,8 @@ __Attendance:__
 __# of Authors:__
 
 __Author Position:__
+
+__Outcome:__
 ```
 
 #### Forwarding Poll
@@ -151,6 +155,8 @@ __Attendance:__
 __# of Authors:__
 
 __Author Position:__
+
+__Outcome:__
 ```
 
 #### Prioritization Poll
@@ -202,11 +208,17 @@ INSERT MINUTES HERE
 
 __POLL: Example poll wording.__
 
-|Strongly For|Weakly For|Neutral|Weakly Against|Strongly Against|
+|Strongly Favor|Weakly Favor|Neutral|Weakly Against|Strongly Against|
 |-|-|-|-|-|
 | | | | | |
 
-__Attendance:__ N
+__Attendance:__
+
+__# of Authors:__
+
+__Author Position:__
+
+__Outcome:__
 
 ---+++ Zoom Chat Log
 
