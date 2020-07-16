@@ -255,7 +255,7 @@ __Champion:__
 
 __Minute Taker:__
 
-__Start Review:__ YYYY-MM-DD HOUR:MINUTE TIMEZONE
+__Start:__ YYYY-MM-DD HOUR:MINUTE TIMEZONE
 
 Does this proposal have:
    * Examples?
