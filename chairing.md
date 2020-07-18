@@ -71,15 +71,15 @@ Problems should be discovered and explored during meetings, but resist the tempt
 0. Record the number of attendees present, number of authors present, author position, date, and time.
 0. Ask if anyone wishes to explain how they voted or if anyone wants to request an explanation for a certain vote (attendees may always decline such a request).
 0. State and record what the outcome of the poll was, which will be one of the following:
-   * No objection to unanimous consent.
-   * No objection to unanimous dissent.
-   * Unanimous consensus for (no neutral or against votes).
+   * No objection to unanimous consensus in favor.
+   * No objection to unanimous consensus against.
+   * Unanimous consensus in favor (no neutral or against votes).
    * Unanimous consensus against (no neutral or for votes).
-   * Strong consensus for (no against votes).
+   * Strong consensus in favor (no against votes).
    * Strong consensus against (no for votes).
-   * Consensus for.
+   * Consensus in favor.
    * Consensus against.
-   * Weak consensus for.
+   * Weak consensus in favor.
    * Weak consensus against.
    * No consensus.
 
@@ -110,7 +110,7 @@ __Double underscores denote bold italics text in TWiki and bold text in GitHub M
 ```
 __POLL:__
 
-|Strongly For|Weakly For|Neutral|Weakly Against|Strongly Against|
+|Strongly Favor|Weakly Favor|Neutral|Weakly Against|Strongly Against|
 |-|-|-|-|-|
 | | | | | |
 
@@ -146,7 +146,7 @@ __Outcome:__
 ```
 __POLL: Send PNNNNRM (<FEATURE>) to LEWG for C++XY, with priority PP.__
 
-|Strongly For|Weakly For|Neutral|Weakly Against|Strongly Against|
+|Strongly Favor|Weakly Favor|Neutral|Weakly Against|Strongly Against|
 |-|-|-|-|-|
 | | | | | |
 
@@ -164,7 +164,7 @@ __Outcome:__
 ```
 __POLL: We should promise more committee time to pursuing <FEATURE>, knowing that our time is scarce and this will leave less time for other work.__
 
-|Strongly For|Weakly For|Neutral|Weakly Against|Strongly Against|
+|Strongly Favor|Weakly Favor|Neutral|Weakly Against|Strongly Against|
 |-|-|-|-|-|
 | | | | | |
 
@@ -309,5 +309,3 @@ When this outcome is used the GitHub issue(s) should have the "LEWG" tag removed
 ```
 __OUTCOME: Library Evolution sends PNNNNRM (<FEATURE>), with the guidance below, to GGG, for SHIP.__
 ```
-
-
