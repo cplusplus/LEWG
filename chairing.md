@@ -56,6 +56,7 @@ Problems should be discovered and explored during meetings, but resist the tempt
 0. For face-to-face meetings, record attendance.
 0. Record the agenda, date, time, and minute taker identity.
 0. Ensure you have sufficient quorum (# of attendees + relevant stakeholders).
+0. Remind everyone about ongoing mailing list reviews and electronic polls; mention the specific topics under consideration.
 0. Remind everyone about the Code of Conduct.
 
 ### Polling Checklist
