@@ -53,11 +53,14 @@ Problems should be discovered and explored during meetings, but resist the tempt
 
 0. Start a chair notes document (see templates below).
 0. Find a minute taker.
-0. For face-to-face meetings, record attendance.
+0. Record attendance.
 0. Record the agenda, date, time, and minute taker identity.
 0. Ensure you have sufficient quorum (# of attendees + relevant stakeholders).
-0. Remind everyone about ongoing mailing list reviews and electronic polls; mention the specific topics under consideration.
+0. Remind everyone about the patent and IP policies.
+0. Remind everyone about the recording policies.
 0. Remind everyone about the Code of Conduct.
+0. Remind everyone about ongoing mailing list reviews; mention the specific topics under consideration.
+0. Remind everyone about ongoing electronic polls; mention the specific topics under consideration.
 
 ### Polling Checklist
 
